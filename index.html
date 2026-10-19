@@ -78,12 +78,9 @@ header { display: flex; justify-content: space-between; align-items: center; gap
   position: relative;
   overflow: hidden;
 }
-/* linea dei 3 metri: dettaglio da campo di pallavolo */
-.ticket::after {
-  content: ""; position: absolute; inset: 0 auto 0 66%;
-  width: 2px; background: rgba(255,255,255,.14);
-}
-.ticket > * { position: relative; z-index: 1; }
+.bear { position: absolute; right: -14px; bottom: -10px; width: 46%; max-width: 230px; aspect-ratio: 1; z-index: 0; pointer-events: none; background: #ffffff; opacity: .13;
+  -webkit-mask: url(assets/orso-mask.png) center / contain no-repeat; mask: url(assets/orso-mask.png) center / contain no-repeat; }
+.ticket > :not(.bear) { position: relative; z-index: 1; }
 .where { justify-self: start; display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 11px; border-radius: 10px; font: 800 1.25rem/1 var(--f-display); letter-spacing: .06em; text-transform: uppercase; }
 .where svg { width: 20px; height: 20px; }
 .where.home { background: #ffffff; color: #1d285e; }
@@ -232,6 +229,7 @@ footer a { color: inherit; }
     app.innerHTML =
       (eProssima ? '' : '<button class="back" id="back" type="button">← Torna alla prossima partita</button>') +
       '<article class="ticket' + (eProssima ? '' : ' other') + '" aria-label="' + (eProssima ? "Prossima partita" : "Partita selezionata") + '">' +
+        '<div class="bear" aria-hidden="true"></div>' +
         '<div class="eyebrow">' + (eProssima ? "Prossima partita" : "Partita selezionata") + (p.giornata ? ' <span class="pill">' + p.giornata + 'ª giornata</span>' : '') +
           '</div>' +
         '<div class="where ' + (p.in_casa ? 'home' : 'away') + '">' + (p.in_casa ? icoHome + "In casa" : icoPlane + "Trasferta") + '</div>' +
