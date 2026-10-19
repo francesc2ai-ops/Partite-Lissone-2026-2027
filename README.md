@@ -2,7 +2,7 @@
 
 Pagina web per la squadra **Gaffeo Ortofrutticoli** (Serie D Maschile, girone C, FIPAV Lombardia).
 Mostra la prossima partita con data, orario, avversario e palestra, l'orario di ritrovo
-(1 ora e 20 minuti prima dell'inizio) e due pulsanti per aprire il navigatore:
+(1 ora e 15 minuti prima dell'inizio) e due pulsanti per aprire il navigatore:
 **Google Maps** e **Waze**. Sotto c'è l'elenco delle partite successive.
 
 La pagina passa da sola alla partita successiva 2 ore e 30 minuti dopo l'inizio di quella in corso.
@@ -57,7 +57,7 @@ oppure le coordinate esatte (da Google Maps: tasto destro sul punto → copia le
 
 ## Personalizzare
 
-- **Anticipo del ritrovo**: in `data/partite.json`, campo `ritrovo_minuti_prima` (oggi 80 = 1h20).
+- **Anticipo del ritrovo**: in `data/partite.json`, campo `ritrovo_minuti_prima` (oggi 75 = 1h15).
   Per renderlo permanente cambia lo stesso valore in `scripts/converti.py`.
 - **Altra squadra**: `python scripts/converti.py data/calendario_gare.xlsx "NOME SQUADRA"`
   e cambia lo stesso nome nel file della GitHub Action.

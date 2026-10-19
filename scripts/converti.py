@@ -122,7 +122,7 @@ def main():
         "campionato": "Serie D Maschile" if c_serie is None or testo(primo[c_serie]) == "DM" else testo(primo[c_serie]),
         "girone": testo(primo[c_girone]) if c_girone is not None else "",
         "aggiornato": datetime.now().strftime("%Y-%m-%dT%H:%M"),
-        "ritrovo_minuti_prima": 80,
+        "ritrovo_minuti_prima": 75,
         "partite": partite,
     }
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
