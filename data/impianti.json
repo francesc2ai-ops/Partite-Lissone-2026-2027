@@ -1,0 +1,4 @@
+{
+  "_come_si_usa": "Chiave = 'Nome impianto - Città' come appare nella pagina. Valori: 'indirizzo' (con civico) e/o 'lat' + 'lon' (coordinate precise, hanno la precedenza). Dopo la modifica la GitHub Action rigenera partite.json.",
+  "_esempio": { "indirizzo": "Via Giuseppe Piermarini 34, Lissone MB", "lat": 45.61, "lon": 9.24 }
+}
